@@ -1,0 +1,27 @@
+create table ward(
+     ward_id int(5) primary key,
+    ward_name varchar(20) not null,
+     bed_numbers int(4) not null,
+     available int(4) ,
+    rate decimal(10,2)
+     );
+
+create table patient(
+     patient_id int(5) primary key,
+    patient_name varchar(20) not null,
+   patient_address varchar(20) not null,
+     gender varchar(20) not null,
+     age int(3) not null,
+    problem varchar(25) not null,
+   ward_id  int(5) not null,
+    admit_date varchar(15) not null,
+    release_date varchar(15),
+    ward_exp decimal(10,2),
+    medical_exp decimal(10,2),
+    foreign key (ward_id) references ward (ward_id)
+   );
+
+https://dev.mysql.com/doc/refman/8.0/en/date-and-time-literals.html
+
+    
+     );
